@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig
+    ~/.gitignore
+
+- create:
+    - ~/projects
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

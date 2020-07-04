@@ -1,0 +1,12 @@
+[github]
+  user                = Techneaux
+[user]
+  email               = jason.silverman@gmail.com
+  name                = Jay Silverman
+[alias]
+  # http://gitready.com/intermediate/2009/02/12/easily-fetching-upstream-changes.html
+  pu                  = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  # update submodules
+  subup               = !"git pull --recurse-submodules && git submodule update"
+  # delete branches that have already been merged into the current branch
+  rmmerged            = !"git branch --merged | grep -v '*' | grep -v \"master\" | xargs -n 1 git branch -d && git remote prune origin"
